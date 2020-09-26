@@ -16,18 +16,6 @@ mongoose.connect(process.env.DATABASE,
 
 //Middleware
 server.use(express.json());
-
-
-//Creating a connection to database 
-// mongoose.connect(
-//     "mongodb://localhost:27017/Aloan-db",
-//     { useNewUrlParser: true, useUnifiedTopology: true },
-//     function(err) {
-//       if (err) throw err;
-//       console.log("Successfully connected");
-//     }
-//   );
-
   //Import Routes
   const loginroutes = require('./routes/loginRoutes');
 server.use('/login',loginroutes);
